@@ -5,6 +5,7 @@ import { Row, Col, Image, ListGroup, Card, Button, ListGroupItem, Form } from 'r
 import Rating from '../components/Rating'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
+import Meta from '../components/Meta'
 import { listProductDetails, createProductReview } from '../actions/productActions'
 import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstans'
 
@@ -49,6 +50,7 @@ const ProducScreen = ({ history, match }) => {
   }
   return (
     <>
+      <Meta title={product.name} />
       <Link className="btn btn-light my-3" to="/">
         Go Back
       </Link>
